@@ -1,15 +1,15 @@
 const merge = require('webpack-merge');
-const baseConfig = require('./base.config.js');
 const path = require('path');
+const { baseConfig , projectRoot } = require('./base.config.js');
 
 module.exports = merge(baseConfig, {
   entry: './src/app.js',
   output: {
-    path: path.resolve(__dirname, '../dev'),
+    path: path.resolve(projectRoot, './dev'),
     filename: 'index.js',
   },
   devServer: {
-    contentBase: path.join(__dirname, '../dev'),
+    contentBase: path.join(projectRoot, './dev'),
     compress: false,
     port: 9000
   }

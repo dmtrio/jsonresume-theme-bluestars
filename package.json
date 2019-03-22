@@ -2,7 +2,7 @@
   "name": "jsonresume-theme-bluestars",
   "version": "1.0.0",
   "description": "",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "<git_repo_url>"

@@ -1,11 +1,11 @@
 const merge = require('webpack-merge');
-const baseConfig = require('./base.config.js');
 const path = require('path');
+const { baseConfig , projectRoot } = require('./base.config.js');
 
 module.exports = merge(baseConfig, {
-  entry: '/src/index.js',
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(projectRoot, './dist'),
     filename: 'index.js',
     libraryTarget: 'commonjs2'
   },
