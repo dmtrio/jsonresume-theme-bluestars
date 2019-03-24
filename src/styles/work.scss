@@ -1,0 +1,28 @@
+$barSpacing: 20px;
+
+.work {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    // width: 100%;
+    display: flex;
+
+    h2 {
+      display: inline-flex;
+      margin-right: $barSpacing;
+
+      &:nth-of-type(1n+2) {
+        font-weight: normal;
+        &::before {
+          margin-right: 20px;
+          content: "";
+          border-right: 1px solid;
+        }
+      }
+
+    }
+  }
+  &__highlight {
+
+  }
+}

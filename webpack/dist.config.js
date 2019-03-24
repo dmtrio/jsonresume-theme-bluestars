@@ -9,6 +9,7 @@ module.exports = merge(baseConfig, {
     filename: 'index.js',
     libraryTarget: 'commonjs2'
   },
+  target: 'node',
   externals: {
     'react': 'commonjs react' 
   }

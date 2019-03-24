@@ -1,0 +1,43 @@
+* {
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.resume-layout {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+
+  &__header {
+    flex: 100%;
+  }
+
+  &__column {
+    margin: 10px 20;
+    &--primary {
+      flex: 1 0 550px;
+    }
+    &--secondary {
+      flex: 1 0 300px;
+    }
+
+
+  }
+  
+  .section {
+    &__title {
+      color: $primary-color;
+      display: inline-flex;
+      &::after {
+        position: relative;
+        bottom: 4px;
+        content: "";
+        width: 100%;
+        border-bottom: 2px solid $primary-color;
+      }
+    }
+  }
+
+}
+

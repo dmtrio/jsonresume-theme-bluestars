@@ -8,8 +8,8 @@ Object.defineProperty(exports, "__esModule", {
 Object.defineProperty(exports, "default", {
   enumerable: true,
   get: function get() {
-    return _Square.default;
+    return _Resume.default;
   }
 });
 
-var _Square = _interopRequireDefault(require("./components/square"));
+var _Resume = _interopRequireDefault(require("./components/Resume"));
