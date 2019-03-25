@@ -1,5 +1,6 @@
 import React from "react";
 import Work from "./Work";
+import '../pack.scss';
 
 const Resume = props => {
   const { 

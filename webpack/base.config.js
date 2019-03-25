@@ -1,4 +1,6 @@
 const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const devMode = process.env.NODE_ENV !== 'production';
 const projectRoot = path.resolve(__dirname, '../');
 
 module.exports = {
@@ -14,14 +16,23 @@ module.exports = {
           loader: 'babel-loader'
         },
         {
-          test: /\.scss$/,
+          test: /\.(sa|sc|c)ss$/,
           use: [
-              "style-loader", // creates style nodes from JS strings
-              "css-loader", // translates CSS into CommonJS
-              "sass-loader" // compiles Sass to CSS, using Node Sass by default
-          ]
+            devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+            'css-loader',
+            // 'postcss-loader',
+            'sass-loader',
+          ],
         }
       ]
-    }
+    },
+    plugins: [
+      new MiniCssExtractPlugin({
+        // Options similar to the same options in webpackOptions.output
+        // both options are optional
+        filename: '[name].css',
+        chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+      })
+    ],
   }
 };

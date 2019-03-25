@@ -2,7 +2,6 @@ import ReactDOM from 'react-dom';
 import React, { Component } from "react";
 import Resume from "./components/Resume";
 import demetrioResumeJson from "./mock/resume.json"
-import './pack.scss';
 
 class App extends Component {
   constructor(props) {
