@@ -1,4 +1,6 @@
-@import './styles/normalize.scss';
-@import './styles/globals.scss';
-@import './styles/index.scss';
-@import './styles/work.scss';
+$font-stack: Helvetica, sans-serif;
+$primary-color: #2b8fe6;
+
+@import './normalize.scss';
+@import './components/resume.scss';
+@import './components/work.scss';
