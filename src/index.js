@@ -1,18 +1,15 @@
-import React from "react";
+"use strict";
 
-const ReactColorSquare = props => {
-  const { width, height, color, text } = props;
-  return (
-    <div
-      style={{
-        width: width || 100,
-        height: height || 100,
-        backgroundColor: color || "blue"
-      }}
-    >
-      {text}
-    </div>
-  );
-};
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-export default ReactColorSquare;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function get() {
+    return _Square.default;
+  }
+});
+
+var _Square = _interopRequireDefault(require("./components/square"));
