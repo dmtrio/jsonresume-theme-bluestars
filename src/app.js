@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import React, { Component } from "react";
-import Resume from "./index.js/index.js.js";
+import Resume from "./components/Resume";
 import demetrioResumeJson from "./mock/resume.json"
 import './pack.scss';
 
