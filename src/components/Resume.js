@@ -1,5 +1,7 @@
 import React from "react";
 import Work from "./Work";
+import Skills from "./Skills";
+import Education from "./Education";
 import '../pack.scss';
 
 const Resume = props => {
@@ -16,18 +18,6 @@ const Resume = props => {
     references
   } = props.resume;
 
-  const skillElements = []
-  for (const [index, skillObj] of skills.entries()) {
-    skillElements.push(
-    <div key={index}>
-      <h3>{skillObj.name}</h3>
-      {skillObj.keywords.map((value, index) => {
-        return <li key={index}>{value}</li>
-      })}
-    </div>
-    )
-  }
-
   return (
     <div className="resume-layout">
       <div className="resume-layout__header">
@@ -37,7 +27,8 @@ const Resume = props => {
         <Work work={work} />
       </div>
       <div className="resume-layout__column resume-layout__column--secondary">
-        {skillElements}
+        <Skills skills={skills} />
+        <Education education={education} />
       </div>
     </div>
   );

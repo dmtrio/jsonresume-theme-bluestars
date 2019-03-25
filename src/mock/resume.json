@@ -54,6 +54,14 @@
     "gpa": "4.0",
     "courses": [
     ]
+  },
+  {
+    "institution": "Hack Reactor",
+    "area": "Advanced Software Engineering",
+    "studyType": "Immersive Program",
+    "endDate": "2017-07-30",
+    "courses": [
+    ]
   }],
   "awards": [{
     "title": "Award",
